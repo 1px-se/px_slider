@@ -1,0 +1,21 @@
+<div class="px-slider">
+    <div class="px-slider-slides">
+        {% for img in images %}
+            <div class="px-slider-slide" data-px-slider-id="{{ forloop.counter0 }}">
+                <img src="{{ img.image.url }}">
+                <div>
+                    {% if img.name %}<h1>{{ img.name }}</h1>{% endif %}
+                    {% if img.description %}<p>{{ img.description }}</p>{% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <button class="px-slider-prev-button"><</button>
+    {% for img in images %}
+        <button data-px-slider-id="{{ forloop.counter0 }}"
+            class="px-slider-button">
+            {{ forloop.counter }}
+        </button>
+    {% endfor %}
+    <button class="px-slider-next-button">></button>
+</div>
