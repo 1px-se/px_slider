@@ -7,4 +7,5 @@ setuptools.setup(
         'django-cms',
         'django-filer',
     ],
+    include_package_data=True,
 )
