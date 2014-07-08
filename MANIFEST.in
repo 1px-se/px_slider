@@ -1,1 +1,1 @@
-recursive-include px_slider/templates/px/slider/*
+recursive-include slider/templates/px/slider *
